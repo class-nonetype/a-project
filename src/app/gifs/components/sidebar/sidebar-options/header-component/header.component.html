@@ -1,0 +1,14 @@
+<div class="p-4 mb-2 flex items-center justify-between">
+  <h5 class="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-slate-900">
+    Sidebar
+  </h5>
+  <button type="button"
+          class="flex items-center gap-2 p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+          aria-label="Toggle sidebar"
+          [attr.title]="collapsed ? 'Expand' : 'Collapse'"
+          (click)="toggle.emit()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-5 h-5 transition-transform" [style.transform]="collapsed ? 'rotate(180deg)' : 'none'">
+      <path fill-rule="evenodd" d="M15.78 18.28a.75.75 0 01-1.06 0l-6-6a.75.75 0 010-1.06l6-6a.75.75 0 111.06 1.06L10.06 12l5.72 5.72a.75.75 0 010 1.06z" clip-rule="evenodd" />
+    </svg>
+  </button>
+</div>

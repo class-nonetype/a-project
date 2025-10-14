@@ -1,0 +1,5 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+/* Prevent horizontal scroll from fixed/sidebar layout */
+html, body { overflow-x: hidden; }
