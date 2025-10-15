@@ -1,4 +1,5 @@
-<nav class="flex min-w-[240px] flex-col gap-1 p-2 font-sans text-base font-normal text-slate-700">
+<nav class="flex h-full flex-col gap-2 p-2 font-sans text-base font-normal text-slate-700"
+     [style.minWidth]="collapsed ? '4.5rem' : '240px'">
 
   <app-sidebar-dashboard-option [collapsed]="collapsed"/>
 
@@ -56,12 +57,15 @@
   </div>
   -->
 
-  <hr class="my-2 border-slate-200" />
+  <hr class="my-3 border-slate-200/70" />
 
   <app-sidebar-inbox-option [collapsed]="collapsed" />
   <app-sidebar-profile-option [collapsed]="collapsed" />
   <app-sidebar-settings-option [collapsed]="collapsed" />
-  <app-sidebar-sign-out-option [collapsed]="collapsed" />
+
+  <div class="mt-auto border-t border-slate-200/70 pt-3">
+    <app-sidebar-sign-out-option [collapsed]="collapsed" />
+  </div>
 
 
 

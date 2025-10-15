@@ -8,6 +8,7 @@ import { SidebarSettingsOptionComponent } from './settings-option-component/sett
 
 @Component({
   selector: 'app-sidebar-menu-options',
+  standalone: true,
   imports: [
     SidebarDashboardOptionComponent,
     SidebarInboxOptionComponent,

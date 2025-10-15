@@ -5,6 +5,7 @@ import { SidebarMenuOptionsComponent } from './sidebar-options/sidebar-menu-opti
 
 @Component({
   selector: 'app-sidebar',
+  standalone: true,
   imports: [
     SidebarHeaderComponent,
     SidebarMenuOptionsComponent

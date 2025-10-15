@@ -1,8 +1,11 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { NgClass, NgIf } from '@angular/common';
+import { SidebarToggleOptionComponent } from '../toggle-option-component/toggle-option.component';
 
 @Component({
   selector: 'app-sidebar-header',
-  imports: [],
+  standalone: true,
+  imports: [NgClass, NgIf, SidebarToggleOptionComponent],
   templateUrl: './header.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
