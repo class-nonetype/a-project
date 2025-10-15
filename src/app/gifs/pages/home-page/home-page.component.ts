@@ -5,6 +5,7 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-home-page',
   imports: [RouterOutlet, SidebarComponent],
+  styleUrl: './home-page.component.css',
   templateUrl: './home-page.component.html'
 })
 export default class HomePageComponent { }

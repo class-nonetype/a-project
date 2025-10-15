@@ -1,0 +1,13 @@
+/* Contenedor a toda pantalla, con dos columnas: sidebar + contenido */
+.app-layout {
+  min-height: 100dvh;                 /* alto de viewport (estable en móviles) */
+  display: grid;
+  grid-template-columns: auto 1fr;    /* sidebar a la izquierda, contenido ocupa el resto */
+}
+
+/* Evita overflow horizontal cuando el contenido es ancho */
+.app-main {
+  min-width: 0;
+}
+
+

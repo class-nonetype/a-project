@@ -10,6 +10,7 @@ import { SidebarMenuOptionsComponent } from './sidebar-options/sidebar-menu-opti
     SidebarHeaderComponent,
     SidebarMenuOptionsComponent
 ],
+  styleUrl: './sidebar.component.css',
   templateUrl: './sidebar.component.html',
 })
 export class SidebarComponent {

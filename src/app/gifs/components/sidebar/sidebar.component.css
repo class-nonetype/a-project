@@ -1,0 +1,42 @@
+/* Base */
+.sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 20rem;
+
+  /* redondeo solo del lado derecho para que no se vea “corte” abajo */
+  border-radius: 0 1rem 1rem 0;
+
+  background-color: #fff;
+  background-clip: border-box;
+  color: #334155;
+
+  /* sombra similar a tu tailwind */
+  box-shadow:
+    0 20px 25px -5px rgba(30, 41, 59, 0.10),
+    0  8px 10px -6px rgba(30, 41, 59, 0.10),
+    0  1.5px 6px 0 rgba(15, 23, 42, 0.06);
+
+  /* alto completo del viewport */
+  height: 100dvh;
+
+  overflow: hidden;
+  will-change: width, min-width;
+  transition: width 200ms ease, max-width 200ms ease, padding 160ms ease;
+  padding: 1rem; /* por defecto expandido */
+}
+
+/* Expandido (p-4) */
+.sidebar:not([data-collapsed="true"]) {
+  padding: 1rem;
+}
+
+/* Colapsado (p-2 + ancho máx a 5rem + sombra sutil) */
+.sidebar[data-collapsed="true"] {
+  padding: 0.5rem;
+  max-width: 5rem;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.06);
+}

@@ -1,8 +1,4 @@
-<div class="relative flex h-[calc(100vh-2rem)] w-full max-w-[20rem] flex-col rounded-2xl bg-white bg-clip-border text-gray-700 shadow-xl shadow-slate-900/6"
-     [class.p-4]="!collapsed"
-     [class.p-2]="collapsed"
-     [style.maxWidth]="collapsed ? '5rem' : ''"
-     [attr.data-collapsed]="collapsed">
+<div class="sidebar" [attr.data-collapsed]="collapsed">
   <app-sidebar-header [collapsed]="collapsed" (toggle)="onToggleSidebar()" />
   <app-sidebar-menu-options [collapsed]="collapsed" />
 </div>
