@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+﻿import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,16 +20,14 @@ export class SidebarDashboardOptionComponent {
     this._collapsed = value;
     if (value) {
       this.open = false;
-    } else {
-      this.open = true;
     }
   }
   get collapsed(): boolean {
     return this._collapsed;
   }
 
-  // Guarda si el acordeón está abierto cuando el panel está expandido.
-  open = true;
+  // Keeps track of whether the dashboard accordion is open when the panel is expanded.
+  open = false;
 
   toggle(): void {
     if (this.collapsed) {

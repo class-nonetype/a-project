@@ -39,7 +39,7 @@ export const routes: Routes = [
       {
         path: 'inbox',
         loadComponent: () =>
-          import('./gifs/pages/inbox-page/inbox-page.component').then((m) => m.default),
+          import('./gifs/pages/ticket-inbox-page/ticket-inbox-page.component').then((m) => m.default),
       },
       {
         path: 'profile',

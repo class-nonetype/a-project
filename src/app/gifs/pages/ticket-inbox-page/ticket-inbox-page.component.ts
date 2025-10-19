@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { NgFor } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
+import { NgFor } from '@angular/common';
 
-interface InboxMessage {
+interface Tickets {
   from: string;
   subject: string;
   time: string;
@@ -10,15 +10,15 @@ interface InboxMessage {
 }
 
 @Component({
-  selector: 'app-inbox-page',
+  selector: 'app-ticket-inbox-page',
   standalone: true,
   imports: [NgFor, MatIconModule],
-  templateUrl: './inbox-page.component.html',
-  styleUrl: './inbox-page.component.css',
+  templateUrl: './ticket-inbox-page.component.html',
+  styleUrl: './ticket-inbox-page.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class InboxPageComponent {
-  readonly messages: InboxMessage[] = [
+export default class TicketInboxPageComponent {
+  readonly messages: Tickets[] = [
     { from: 'Marketing', subject: 'Campaña Q4 aprobada', time: 'Hace 5 min', unread: true },
     { from: 'Finanzas', subject: 'Reporte de facturación', time: 'Hace 32 min', unread: true },
     { from: 'Ana Gómez', subject: 'Revisión del dashboard', time: 'Hace 1 h', unread: false },

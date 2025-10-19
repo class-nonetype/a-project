@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { SidebarDashboardOptionComponent } from './dashboard-option-component/dashboard-option.component';
-import { SidebarInboxOptionComponent } from './inbox-option-component/inbox-option.component';
+import { SidebarTicketsOptionComponent } from './tickets-option-component/tickets-option.component';
 import { SidebarProfileOptionComponent } from './profile-option-component/profile-option.component';
 import { SidebarSignOutOptionComponent } from './sign-out-option-component/sign-out-option.component';
 import { SidebarSettingsOptionComponent } from './settings-option-component/settings-option.component';
@@ -15,7 +15,7 @@ import { SidebarSettingsOptionComponent } from './settings-option-component/sett
     MatDividerModule,
     MatListModule,
     SidebarDashboardOptionComponent,
-    SidebarInboxOptionComponent,
+    SidebarTicketsOptionComponent,
     SidebarProfileOptionComponent,
     SidebarSettingsOptionComponent,
     SidebarSignOutOptionComponent

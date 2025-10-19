@@ -6,12 +6,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 
 @Component({
-  selector: 'app-sidebar-inbox-option',
+  selector: 'app-sidebar-ticket-inbox-option',
   standalone: true,
   imports: [NgIf, RouterLink, MatBadgeModule, MatIconModule, MatListModule],
-  templateUrl: './inbox-option.component.html',
+  templateUrl: './tickets-option.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SidebarInboxOptionComponent {
+export class SidebarTicketsOptionComponent {
   @Input() collapsed = false;
 }
