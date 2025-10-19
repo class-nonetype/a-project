@@ -1,11 +1,9 @@
-<div role="button"
-  class="group relative flex items-center rounded-xl text-slate-600 transition-colors duration-150 ease-out cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
-  [ngClass]="collapsed ? 'size-12 justify-center p-0' : 'h-12 w-full px-3 gap-3 hover:bg-slate-600/10'">
-  <span class="grid place-items-center transition-colors"
-        [ngClass]="collapsed ? 'size-12 rounded-[12px] group-hover:bg-slate-600/15 group-active:bg-slate-600/25' : 'size-11 rounded-[12px]'">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-5 w-5">
-      <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v9a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.166 5.106a.75.75 0 010 1.06 8.25 8.25 0 1011.668 0 .75.75 0 111.06-1.06c3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788a.75.75 0 011.06 0z" clip-rule="evenodd" />
-    </svg>
-  </span>
-  <span class="text-sm font-medium text-slate-900" [class.hidden]="collapsed">Sign Out</span>
-</div>
+<button mat-list-item
+        type="button"
+        class="sidebar-item"
+        [class.sidebar-item--compact]="collapsed"
+        aria-label="Sign out"
+        disableRipple>
+  <mat-icon matListItemIcon>logout</mat-icon>
+  <span class="sidebar-item__label" *ngIf="!collapsed">Sign Out</span>
+</button>

@@ -1,0 +1,20 @@
+<section class="page">
+  <header class="page__header">
+    <h1>Reporting</h1>
+    <p>Indicadores destacados de la semana para validar crecimiento.</p>
+  </header>
+
+  <div class="page__grid">
+    <article class="page__card" *ngFor="let trend of trends">
+      <div class="page__card-icon" [class.page__card-icon--positive]="trend.positive">
+        <mat-icon aria-hidden="true">{{ trend.positive ? 'trending_up' : 'trending_down' }}</mat-icon>
+      </div>
+      <div class="page__card-body">
+        <h2>{{ trend.name }}</h2>
+        <span class="page__card-delta" [class.page__card-delta--positive]="trend.positive">
+          {{ trend.delta }}
+        </span>
+      </div>
+    </article>
+  </div>
+</section>

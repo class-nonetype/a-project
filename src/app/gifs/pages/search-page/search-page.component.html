@@ -1,0 +1,21 @@
+<section class="page">
+  <header class="page__header">
+    <h1>Analytics</h1>
+    <p>Explora datasets para crear paneles personalizados.</p>
+    <div class="page__search">
+      <mat-icon aria-hidden="true">search</mat-icon>
+      <input type="search" placeholder="Buscar informes, métricas o autores..." />
+    </div>
+  </header>
+
+  <div class="page__results">
+    <article class="page__result" *ngFor="let result of results">
+      <div class="page__result-head">
+        <span class="page__result-category">{{ result.category }}</span>
+        <mat-icon aria-hidden="true">open_in_new</mat-icon>
+      </div>
+      <h2>{{ result.title }}</h2>
+      <p>{{ result.description }}</p>
+    </article>
+  </div>
+</section>

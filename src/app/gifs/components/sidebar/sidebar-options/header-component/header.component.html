@@ -1,12 +1,10 @@
-<div class="mb-2 flex items-center" [ngClass]="collapsed ? 'justify-center px-0 pt-2' : 'justify-between px-4 pt-4'">
-
-  <!--
-  <img src="https://docs.material-tailwind.com/img/logo-ct-dark.png" alt="brand" class="w-8 h-8" />
-  -->
-
-
-  <h5 *ngIf="!collapsed" class="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-slate-900">
-    Sidebar
-  </h5>
+<div class="sidebar-header" [class.sidebar-header--compact]="collapsed">
+  <div class="sidebar-header__brand" [class.sidebar-header__brand--compact]="collapsed">
+    <mat-icon>widgets</mat-icon>
+    <div class="sidebar-header__titles" *ngIf="!collapsed">
+      <span class="sidebar-header__title">Control Center</span>
+      <span class="sidebar-header__subtitle">Dashboard</span>
+    </div>
+  </div>
   <app-sidebar-toggle-option [collapsed]="collapsed" (toggle)="toggle.emit()" />
 </div>

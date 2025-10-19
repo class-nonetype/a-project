@@ -1,10 +1,12 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { NgClass } from '@angular/common';
+import { NgIf } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'app-sidebar-sign-out-option',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgIf, MatIconModule, MatListModule],
   templateUrl: './sign-out-option.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

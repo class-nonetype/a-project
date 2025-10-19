@@ -1,42 +1,55 @@
-/* Base */
+:host {
+  display: block;
+  height: 100%;
+}
+
 .sidebar {
+  --sidebar-bg: #ffffff;
+  --sidebar-fg: #1f2937;
+  --sidebar-muted: #6b7280;
+  --sidebar-accent: #2563eb;
+  --sidebar-radius: 1.25rem;
+  --sidebar-item-radius: 0.9rem;
+  --sidebar-item-height: 3.25rem;
+  --sidebar-spacing: 0.75rem;
+
   position: relative;
   display: flex;
   flex-direction: column;
-
-  width: 100%;
-  max-width: 20rem;
-
-  /* redondeo solo del lado derecho para que no se vea “corte” abajo */
-  border-radius: 0 1rem 1rem 0;
-
-  background-color: #fff;
-  background-clip: border-box;
-  color: #334155;
-
-  /* sombra similar a tu tailwind */
-  box-shadow:
-    0 20px 25px -5px rgba(30, 41, 59, 0.10),
-    0  8px 10px -6px rgba(30, 41, 59, 0.10),
-    0  1.5px 6px 0 rgba(15, 23, 42, 0.06);
-
-  /* alto completo del viewport */
   height: 100dvh;
+  width: 100%;
+  max-width: 19rem;
+  padding: 1.25rem 1rem;
+  gap: 1.2rem;
+
+  background: var(--sidebar-bg);
+  color: var(--sidebar-fg);
+  border-radius: 0 var(--sidebar-radius) var(--sidebar-radius) 0;
+  box-shadow:
+    0 28px 45px -24px rgba(15, 23, 42, 0.4),
+    0 18px 32px -16px rgba(15, 23, 42, 0.22);
 
   overflow: hidden;
-  will-change: width, min-width;
-  transition: width 200ms ease, max-width 200ms ease, padding 160ms ease;
-  padding: 1rem; /* por defecto expandido */
+  transition: max-width 240ms ease, padding 220ms ease;
+  will-change: max-width, padding;
 }
 
-/* Expandido (p-4) */
-.sidebar:not([data-collapsed="true"]) {
-  padding: 1rem;
-}
-
-/* Colapsado (p-2 + ancho máx a 5rem + sombra sutil) */
 .sidebar[data-collapsed="true"] {
-  padding: 0.5rem;
-  max-width: 5rem;
-  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.06);
+  max-width: 5.75rem;
+  padding: 1.25rem 0.65rem;
+  box-shadow:
+    0 20px 35px -18px rgba(15, 23, 42, 0.35),
+    0 12px 20px -12px rgba(15, 23, 42, 0.16);
+}
+
+.sidebar__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1.25rem;
+}
+
+.sidebar[data-collapsed="true"] .sidebar__content {
+  align-items: center;
+  gap: 1.1rem;
 }

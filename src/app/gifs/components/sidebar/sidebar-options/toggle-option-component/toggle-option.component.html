@@ -1,16 +1,6 @@
-<button type="button"
-        class="group relative flex items-center rounded-xl text-slate-600 transition-colors duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
-        [ngClass]="collapsed ? 'size-12 justify-center p-0' : 'h-12 w-full px-3 hover:bg-slate-600/10 justify-end'"
-        [attr.aria-label]="collapsed ? 'Expand sidebar' : 'Collapse sidebar'"
-        [attr.title]="collapsed ? 'Expand sidebar' : 'Collapse sidebar'"
+<button class="sidebar-toggle"
+        type="button"
+        [attr.aria-label]="collapsed ? 'Expandir panel' : 'Colapsar panel'"
         (click)="onToggle()">
-  <span class="grid place-items-center transition-colors"
-        [ngClass]="collapsed ? 'size-12 rounded-[12px] group-hover:bg-slate-600/15 group-active:bg-slate-600/25' : 'size-11 rounded-[12px]'">
-    <svg *ngIf="collapsed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-5 w-5">
-      <path fill-rule="evenodd" d="M8.22 5.72a.75.75 0 011.06 0l6 6a.75.75 0 010 1.06l-6 6a.75.75 0 11-1.06-1.06L13.94 12 8.22 6.28a.75.75 0 010-1.06z" clip-rule="evenodd" />
-    </svg>
-    <svg *ngIf="!collapsed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-5 w-5">
-      <path fill-rule="evenodd" d="M15.78 18.28a.75.75 0 01-1.06 0l-6-6a.75.75 0 010-1.06l6-6a.75.75 0 111.06 1.06L10.06 12l5.72 5.72a.75.75 0 010 1.06z" clip-rule="evenodd" />
-    </svg>
-  </span>
+  <mat-icon>{{ collapsed ? 'chevron_right' : 'chevron_left' }}</mat-icon>
 </button>

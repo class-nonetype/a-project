@@ -1,10 +1,13 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { NgClass } from '@angular/common';
+import { NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'app-sidebar-settings-option',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgIf, RouterLink, MatIconModule, MatListModule],
   templateUrl: './settings-option.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

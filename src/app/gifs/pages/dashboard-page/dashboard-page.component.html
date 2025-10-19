@@ -1,0 +1,31 @@
+<section class="dashboard">
+  <header class="dashboard__header">
+    <div>
+      <h1 class="dashboard__title">Panel general</h1>
+      <p class="dashboard__subtitle">Resumen instantáneo de tu actividad reciente.</p>
+    </div>
+    <button mat-stroked-button color="primary">
+      <mat-icon aria-hidden="true">add</mat-icon>
+      Nuevo reporte
+    </button>
+  </header>
+
+  <div class="dashboard__highlights">
+    <article class="dashboard__card" *ngFor="let item of highlights">
+      <mat-icon class="dashboard__card-icon" aria-hidden="true">{{ item.icon }}</mat-icon>
+      <div class="dashboard__card-body">
+        <span class="dashboard__card-label">{{ item.label }}</span>
+        <strong class="dashboard__card-value">{{ item.value }}</strong>
+        <span class="dashboard__card-trend">{{ item.trend }}</span>
+      </div>
+    </article>
+  </div>
+
+  <section class="dashboard__empty">
+    <mat-icon aria-hidden="true">dashboard</mat-icon>
+    <div>
+      <h2>Elige una opción del menú</h2>
+      <p>Explora Analytics, Reporting o Projects para comenzar a trabajar.</p>
+    </div>
+  </section>
+</section>

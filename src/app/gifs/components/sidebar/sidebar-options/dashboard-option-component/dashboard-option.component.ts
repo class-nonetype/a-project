@@ -1,11 +1,16 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { NgClass, NgIf } from '@angular/common';
+import { NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'app-sidebar-dashboard-option',
   standalone: true,
-  imports: [NgClass, NgIf],
+  imports: [NgIf, RouterLink, MatButtonModule, MatIconModule, MatListModule],
   templateUrl: './dashboard-option.component.html',
+  styleUrl: './dashboard-option.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidebarDashboardOptionComponent {
@@ -23,6 +28,7 @@ export class SidebarDashboardOptionComponent {
     return this._collapsed;
   }
 
+  // Guarda si el acordeón está abierto cuando el panel está expandido.
   open = true;
 
   toggle(): void {

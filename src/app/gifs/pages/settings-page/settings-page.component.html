@@ -1,0 +1,32 @@
+<section class="page">
+  <header class="page__header">
+    <h1>Settings</h1>
+    <p>Configura notificaciones y políticas para tu cuenta.</p>
+  </header>
+
+  <section class="page__group">
+    <h2>Preferencias</h2>
+    <ul class="page__list">
+      <li class="page__list-item" *ngFor="let option of preferences">
+        <div>
+          <h3>{{ option.label }}</h3>
+          <p>{{ option.description }}</p>
+        </div>
+        <span class="page__pill" [class.page__pill--on]="option.enabled">
+          {{ option.enabled ? 'Activo' : 'Desactivado' }}
+        </span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="page__group">
+    <h2>Sesiones</h2>
+    <div class="page__panel">
+      <p>
+        Último acceso registrado hace 2 horas desde Madrid, España (Chrome · Windows). Si no reconoces
+        esta actividad, cambia tu contraseña.
+      </p>
+      <button type="button">Cerrar todas las sesiones</button>
+    </div>
+  </section>
+</section>

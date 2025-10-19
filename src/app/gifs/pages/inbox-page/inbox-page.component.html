@@ -1,0 +1,21 @@
+<section class="page page--stack">
+  <header class="page__header">
+    <div>
+      <h1>Inbox</h1>
+      <p>Gestiona notificaciones y pendientes del equipo en un solo lugar.</p>
+    </div>
+  </header>
+
+  <div class="inbox-list">
+    <article class="inbox-card" *ngFor="let message of messages">
+      <div class="inbox-card__icon" [class.inbox-card__icon--unread]="message.unread">
+        <mat-icon aria-hidden="true">mail</mat-icon>
+      </div>
+      <div class="inbox-card__content">
+        <h2>{{ message.subject }}</h2>
+        <p>{{ message.from }}</p>
+      </div>
+      <span class="inbox-card__time">{{ message.time }}</span>
+    </article>
+  </div>
+</section>

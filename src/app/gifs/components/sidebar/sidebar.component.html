@@ -1,4 +1,6 @@
 <div class="sidebar" [attr.data-collapsed]="collapsed">
-  <app-sidebar-header [collapsed]="collapsed" (toggle)="onToggleSidebar()" />
-  <app-sidebar-menu-options [collapsed]="collapsed" />
+  <div class="sidebar__content">
+    <app-sidebar-header [collapsed]="collapsed" (toggle)="onToggleSidebar()" />
+    <app-sidebar-menu-options [collapsed]="collapsed" />
+  </div>
 </div>

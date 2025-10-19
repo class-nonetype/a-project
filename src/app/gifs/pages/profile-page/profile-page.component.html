@@ -1,0 +1,33 @@
+<section class="page">
+  <header class="page__header">
+    <div class="page__avatar">
+      <span>AG</span>
+    </div>
+    <div>
+      <h1>Ana Gómez</h1>
+      <p>Product Manager · ana.gomez@example.com</p>
+    </div>
+    <button type="button" class="page__edit">
+      <mat-icon aria-hidden="true">edit</mat-icon>
+      Editar perfil
+    </button>
+  </header>
+
+  <section class="page__section">
+    <h2>Resumen</h2>
+    <p>
+      Responsable de coordinar la entrega de productos digitales, alineando objetivos de negocio con
+      la implementación técnica. Supervisa los OKR del equipo y la comunicación con clientes.
+    </p>
+  </section>
+
+  <section class="page__stats">
+    <article class="page__stat-card" *ngFor="let stat of stats">
+      <mat-icon aria-hidden="true">{{ stat.icon }}</mat-icon>
+      <div>
+        <span class="page__stat-label">{{ stat.label }}</span>
+        <strong class="page__stat-value">{{ stat.value }}</strong>
+      </div>
+    </article>
+  </section>
+</section>

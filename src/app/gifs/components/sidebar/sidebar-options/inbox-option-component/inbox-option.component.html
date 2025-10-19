@@ -1,16 +1,13 @@
-<div role="button"
-  class="group relative flex items-center rounded-xl text-slate-600 transition-colors duration-150 ease-out cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
-  [ngClass]="collapsed ? 'size-12 justify-center p-0' : 'h-12 w-full px-3 gap-3 hover:bg-slate-600/10'">
-  <span class="grid place-items-center transition-colors"
-        [ngClass]="collapsed ? 'size-12 rounded-[12px] group-hover:bg-slate-600/15 group-active:bg-slate-600/25' : 'size-11 rounded-[12px]'">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-5 w-5">
-      <path fill-rule="evenodd" d="M6.912 3a3 3 0 00-2.868 2.118l-2.411 7.838a3 3 0 00-.133.882V18a3 3 0 003 3h15a3 3 0 003-3v-4.162c0-.299-.045-.596-.133-.882l-2.412-7.838A3 3 0 0017.088 3H6.912zm13.823 9.75l-2.213-7.191A1.5 1.5 0 0017.088 4.5H6.912a1.5 1.5 0 00-1.434 1.059L3.265 12.75H6.11a3 3 0 012.684 1.658l.256.513a1.5 1.5 0 001.342.829h3.218a1.5 1.5 0 001.342-.83l.256-.512a3 3 0 012.684-1.658h2.844z" clip-rule="evenodd" />
-    </svg>
+<button mat-list-item
+        type="button"
+        class="sidebar-item"
+        [class.sidebar-item--compact]="collapsed"
+        aria-label="Inbox"
+        disableRipple
+        routerLink="/inbox">
+  <span matListItemIcon class="sidebar-icon" [class.sidebar-icon--compact]="collapsed">
+    <mat-icon>inbox</mat-icon>
+    <span class="sidebar-icon__badge">14</span>
   </span>
-  <span class="text-sm font-medium text-slate-900" [class.hidden]="collapsed">Inbox</span>
-  <div class="ml-auto grid place-items-center" [class.hidden]="collapsed">
-    <div class="grid items-center rounded-full bg-slate-600/15 px-2 py-1 text-xs font-semibold uppercase text-slate-700">
-      <span>14</span>
-    </div>
-  </div>
-</div>
+  <span class="sidebar-item__label" *ngIf="!collapsed">Inbox</span>
+</button>

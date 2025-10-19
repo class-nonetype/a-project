@@ -1,10 +1,14 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { NgClass } from '@angular/common';
+import { NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'app-sidebar-inbox-option',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgIf, RouterLink, MatBadgeModule, MatIconModule, MatListModule],
   templateUrl: './inbox-option.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
